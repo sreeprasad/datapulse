@@ -30,11 +30,24 @@ This notebook auto-registers your cataloged datasets as DuckDB views, executes t
 
 
 def _mk_setup_cell() -> nbf.NotebookNode:
-    code = r"""import json, pathlib
+    code = r"""import json, os, pathlib
 import duckdb, pandas as pd
 from IPython.display import display
 
-CATALOG_DIR = pathlib.Path(".datapulse")
+# --- Locate project root so we can find .datapulse/catalog.json even if this notebook lives in notebooks/ ---
+def _find_project_root() -> pathlib.Path:
+    cwd = pathlib.Path.cwd()
+    candidates = [cwd, cwd.parent, cwd.parent.parent]
+    for p in candidates:
+        if (p / ".datapulse" / "catalog.json").exists():
+            return p
+    raise FileNotFoundError("Could not locate .datapulse/catalog.json in cwd or parents")
+
+PROJECT_ROOT = _find_project_root()
+os.chdir(PROJECT_ROOT)  # ensure relative paths resolve from root
+print("📁 Working directory:", PROJECT_ROOT)
+
+CATALOG_DIR = PROJECT_ROOT / ".datapulse"
 CATALOG_FILE = CATALOG_DIR / "catalog.json"
 
 def _quote_ident(name: str) -> str:
@@ -64,7 +77,6 @@ register_catalog(con)
 print("✅ DuckDB in-memory session ready; catalog views are registered.")
 """
     return nbf.v4.new_code_cell(code)
-
 
 
 def _mk_sql_cell(sql: str) -> nbf.NotebookNode:

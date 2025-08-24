@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 MIT License
+<<<<<<< HEAD
 
 Copyright (c) 2025 Sreeprasad
 
@@ -24,3 +25,8 @@ SOFTWARE.
 =======
 MIT License
 >>>>>>> 33b27d4 (feat: initial commit — DataPulse CLI with catalog, SQL queries, and notebook generator)
+||||||| parent of d04e908 (fixup! fix error in notebook)
+=======
+
+Copyright (c) 2025 Your Name
+>>>>>>> d04e908 (fixup! fix error in notebook)
