@@ -1,0 +1,2 @@
+[console_scripts]
+datapulse = datapulse.cli:cli

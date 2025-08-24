@@ -1,0 +1,9 @@
+click
+pandas
+duckdb
+rich
+matplotlib
+jupyterlab
+nbformat
+ipykernel
+pytest

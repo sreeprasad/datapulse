@@ -1,0 +1,4 @@
+order_id,customer,product,qty,price,date
+1,Ada,Laptop,1,1200,2024-01-03
+2,Bob,Mouse,2,25,2024-02-10
+3,Cara,Keyboard,1,80,2024-02-15
