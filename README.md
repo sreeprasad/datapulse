@@ -16,19 +16,14 @@ Natural-language data explorer (local, reproducible).
 
 ```bash
 
-# check version
 uv run datapulse version
 
-# add a dataset
 uv run datapulse add sales data/sales.csv
 
-# preview top rows
 uv run datapulse head sales --limit 3
 
-# query (DuckDB over local files)
 uv run datapulse sql "SELECT product, SUM(qty*price) AS revenue FROM sales GROUP BY product ORDER BY revenue DESC"
 
-# generate a reproducible notebook
 uv run datapulse notebook --sql "SELECT COUNT(*) AS n FROM sales" --out notebooks/analysis.ipynb
 ```
 
@@ -62,7 +57,6 @@ datapulse/
 ```
 
 ## License
-
 MIT
 
 
