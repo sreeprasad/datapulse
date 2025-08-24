@@ -1,6 +1,14 @@
 {
-  "sales": {
+  "sales_feb": {
     "format": "csv",
-    "path": "/Users/arganoil/src/datapulse/data/sales.csv"
+    "path": "/Users/arganoil/src/datapulse/data/sales_feb.csv"
+  },
+  "sales_jan": {
+    "format": "csv",
+    "path": "/Users/arganoil/src/datapulse/data/sales_jan.csv"
+  },
+  "sales_mar": {
+    "format": "csv",
+    "path": "/Users/arganoil/src/datapulse/data/sales_mar.csv"
   }
 }

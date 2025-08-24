@@ -1,0 +1,6 @@
+order_id,customer,product,qty,price,date
+6,Ada,Laptop,1,1150,2024-02-03
+7,Bob,Mouse,3,25,2024-02-10
+8,Cara,Keyboard,2,75,2024-02-15
+9,Frank,Monitor,2,280,2024-02-18
+10,Gina,Docking Station,1,200,2024-02-25

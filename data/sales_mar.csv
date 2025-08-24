@@ -1,0 +1,6 @@
+order_id,customer,product,qty,price,date
+11,Hank,Laptop,2,1100,2024-03-02
+12,Ian,Mouse,4,24,2024-03-06
+13,Jen,Keyboard,1,85,2024-03-11
+14,Kai,Monitor,1,290,2024-03-15
+15,Lia,Webcam,3,50,2024-03-22
